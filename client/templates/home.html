@@ -1,0 +1,14 @@
+<h1>Products</h1>
+<button ui-sref="admin">Admin</button>
+<hr/>
+<div ng-controller='homeCtrl'>
+  <ul>
+    <div ng-repeat="product in products">
+      <h1>this is my product</h1>
+      {{product.image}} <br/>
+      {{product.title}} <br/>
+      {{product.description}} <br/>
+      {{product.price | currency}}
+    </div>
+  </ul>
+</div>

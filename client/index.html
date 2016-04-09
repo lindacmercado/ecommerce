@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='ecommerce'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>My Shoppe</title>
+  </head>
+  <body>
+    <div class='header'>
+      <h1>My Shoppe</h1>
+    </div>
+
+    <div class="nav">
+      <h3>Products</h3>
+      <a href="">Dresses</a> <br/>
+      T-shirt <br/>
+      Hat
+    </div>
+
+    <div class="main_section">
+      <div ui-view=""></div>
+    </div>
+
+    <div class="footer">
+      <h3>Admin</h3>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src='./app.js'></script>
+    <script src='./controllers/homeCtrl.js'></script>
+    <script src='./controllers/adminCtrl.js'></script>
+    <script src='./controllers/productCtrl.js'></script>
+    <script src='./services/cartService.js'></script>
+    <script src='./services/productService.js'></script>
+    <script src='./services/userService.js'></script>
+  </body>
+</html>

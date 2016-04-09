@@ -1,0 +1,32 @@
+.header {
+
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav {
+  line-height: 30px;
+  background-color: blue;
+  height: 450px;
+  width: 100px;
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
+
+.main_section {
+  width: 350px;
+  float:left;
+  padding:10px;
+}
+
+.footer {
+background-color: black;
+color: white;
+clear: both;
+text-align: right;
+padding:5px;
+
+}
