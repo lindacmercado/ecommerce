@@ -1,7 +1,3 @@
-angular.module('ecommerce')
-
-.controller('productCtrl', function($scope, productService){
-
 var Product = require('../models/product');
 
 module.exports = {
@@ -14,18 +10,17 @@ module.exports = {
     })
   },
 
-  getProduct: function(req, res) {
-    Product.find()
-    .exec().then(function(result) {
-      console.log(result);
-      res.status(500).send(result);
+  getProducts: function(req, res) {
+    Product.find(function(err, result) {
+      if (err) return res.status(500).send(err);
+      return res.json(result);
     })
   },
 
   updateProduct: function(req, res) {
     Product.update({_id: req.params.id}, req.body, function(err, result) {
       console.log(result);
-      res.status(500).end();
+      res.status(500).end(result);
     })
   },
 
@@ -35,6 +30,4 @@ module.exports = {
       res.status(500).end();
     })
   }
-
-};
 };

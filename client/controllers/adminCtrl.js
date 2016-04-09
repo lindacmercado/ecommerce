@@ -7,13 +7,13 @@ angular.module('ecommerce')
       $scope.products = res.data;
     })
   }
-  getProducts()
+  getProducts();
 
   $scope.postProduct = function(product) {
     productService.postProduct(product).then(function(res) {
       console.log(res)
       $scope.newProduct = {}
-      getProducts()
+      getProducts();
     })
   }
 

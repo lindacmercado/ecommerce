@@ -2,8 +2,8 @@ angular.module('ecommerce')
 
 .service('productService', function($http) {
 
-  this.getProduct = function() {
-    return http({
+  this.getProducts = function() {
+    return $http({
       method: 'GET',
       url: '/products'
     })

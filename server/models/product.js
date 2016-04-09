@@ -6,4 +6,4 @@ var schema = new mongoose.Schema({
   price: {type: Number, required: true, min: 0}
 })
 
-model.exports = mongoose.model('product', schema);
+module.exports = mongoose.model('product', schema);

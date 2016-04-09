@@ -1,7 +1,7 @@
 angular.module('ecommerce', ['ui.router'])
 
-.config('$urlRouteProvider', '$stateProvider', function($urlRouteProvider, $stateProvider) {
-  $urlRouteProvider.otherwise('/');
+.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
   .state('home', {
@@ -15,4 +15,4 @@ angular.module('ecommerce', ['ui.router'])
     templateUrl: '/templates/admin.html',
     controller: 'adminCtrl'
   })
-});
+}]);
