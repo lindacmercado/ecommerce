@@ -3,7 +3,7 @@ angular.module('ecommerce')
 .service('cartService', function($http, userService) {
 
   this.addItem = function(itemId) {
-    return http({
+    return $http({
       method: 'PUT',
       url: '/cart/' + itemId + '/' + userService.getUserId()
     })

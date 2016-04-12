@@ -1,14 +1,17 @@
-<h1>Products</h1>
-<button ui-sref="admin">Admin</button>
-<hr/>
-<div ng-controller='homeCtrl'>
-  <ul>
-    <div ng-repeat="product in products">
-      <h1>this is my product</h1>
-      {{product.image}} <br/>
-      {{product.title}} <br/>
-      {{product.description}} <br/>
-      {{product.price | currency}}
+
+<div class="row">
+
+    <div ng-controller='homeCtrl' ng-repeat='product in products' class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTT5jc_uZ3Ulpbvao6ZdV_dXuaJfsMYyGCBjXGuezz1vdyJKSQJ" alt="">
+            <div class="caption">
+                <h4 class="pull-right">{{product.price | currency}}</h4>
+                <h4><a href="#">{{product.title}}</a></h4>
+                <p>{{product.description}}</p>
+
+        </div>
     </div>
-  </ul>
+
+  </div>
+
 </div>
